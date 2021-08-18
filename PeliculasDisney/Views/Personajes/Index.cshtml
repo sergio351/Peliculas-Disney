@@ -1,0 +1,97 @@
+﻿@model IEnumerable<PeliculasDisney.Models.Personaje>
+@{
+    ViewData["Title"] = "Lista de Personajes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Personajes</h1>
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-6">
+            <h3>
+                Lista de Personajes
+                <img src="~/img/logo.png" alt="" width="45" height="40">
+            </h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Personajes">Agregar Personaje</a>
+        </div>
+    </div>
+
+    <div class="row">
+        @if (Model != null)
+        {
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(m => m.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.Historia)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.PeliculasAsociadas)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.Peso)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.Edad)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.Imagen)
+                        </td>
+
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.Id
+                            </td>
+                            <td>
+                                @item.Nombre
+                            </td>
+                            <td>
+                                @item.Historia
+                            </td>
+                            <td>
+                                @item.PeliculasAsociadas
+                            </td>
+                            <td>
+                                @item.Peso
+                            </td>
+                            <td>
+                                @item.Edad
+                            </td>
+                            <td>
+                                @item.Imagen
+                            </td>
+                            <td>
+                                <a asp-controller="Personajes" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+                                <a asp-controller="Personajes" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+        }
+        else
+        {
+            <p>No existen Registros</p>
+        }
+    </div>
+
+</div>
