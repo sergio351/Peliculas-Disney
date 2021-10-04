@@ -1,12 +1,11 @@
 ﻿@model PeliculasDisney.Models.Personaje
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Editar Personaje";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
 
-
+<h1>Editar</h1>
 <div class="container">
 
     <div class="row">
@@ -17,7 +16,8 @@
 
     <div class="row">
         <div class="col-sm-10">
-            <form method="post" enctype="multipart/form-data" asp-action="Create">
+            <form method="post" enctype="multipart/form-data" asp-action="Edit">
+                <input type="hidden" asp-for="Id" />
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
@@ -57,13 +57,14 @@
                     <span asp-validation-for="Imagen" class="text-danger"></span>
 
                 </div>
-                
+
                 <div class="form-group">
-                    <input type="submit" value="Agregar Personaje" class="btn btn-primary" />
+                    <input type="submit" value="Editar Personaje" class="btn btn-primary" />
                 </div>
 
             </form>
         </div>
     </div>
 </div>
+
 

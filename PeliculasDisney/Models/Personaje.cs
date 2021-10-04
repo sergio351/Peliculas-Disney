@@ -16,7 +16,7 @@ namespace PeliculasDisney.Models
         public string Historia { get; set; }
         [Display(Name="Peliculas Asociadas")]
         public string PeliculasAsociadas { get; set; }
-        public byte Imagen { get; set; }
+        public byte[] Imagen { get; set; }
 
 
     }

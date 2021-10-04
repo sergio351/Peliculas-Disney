@@ -1,8 +1,35 @@
-﻿@{
+﻿@model IEnumerable<PeliculasDisney.Models.Personaje>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bienvenidos</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<section id="gallery">
+    <div class="container ">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        @if (item.Imagen != null)
+                        {
+                            <img id="imagenArtista" src="data:image/*;base64,@(Convert.ToBase64String(item.Imagen))">
+                        }
+                        else
+                        {
+                            <img id="imagenArtista" style="width:350px;height:350px; object-fit:cover" src="">
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Nombre </h5>
+                           
+
+                            <a asp-action="Create" asp-controller="Contactos" class="btn btn-danger btn-sm">Detalle</a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

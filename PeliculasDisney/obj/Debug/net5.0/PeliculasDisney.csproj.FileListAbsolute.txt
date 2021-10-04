@@ -437,3 +437,6 @@ C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\bin\Debug\net5.0\zh-
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\Index.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\Create.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\Edit.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\Delete.cshtml.g.cs

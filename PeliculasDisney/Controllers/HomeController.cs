@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PeliculasDisney.Data;
 using PeliculasDisney.Models;
 using System;
 using System.Collections.Generic;
@@ -12,15 +14,19 @@ namespace PeliculasDisney.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public HomeController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
         {
-            _logger = logger;
+
+            _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Personaje> listPersonaje = _context.Personaje;
+            return View(listPersonaje);
         }
 
         public IActionResult Privacy()
