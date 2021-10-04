@@ -133,6 +133,48 @@ namespace PeliculasDisney.Controllers
             
             
         }
+
+        //HTTP GEt Edit 
+        public IActionResult Detalle(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var personaje = _context.Personaje.Find(id);
+            if (personaje == null)
+            {
+                return NotFound();
+            }
+
+            return View(personaje);
+        }
+
+        //HTTP Post Edit 
+        [HttpPost]
+        public IActionResult Detalle(Personaje personaje)
+        {
+
+            if (ModelState.IsValid)
+            {
+                if (Request.Form.Files.Count > 0)
+                {
+                    IFormFile file = Request.Form.Files[0];
+                    using (var dataStream = new MemoryStream())
+                    {
+                        file.CopyTo(dataStream);
+                        personaje.Imagen = dataStream.ToArray();
+                    }
+
+                }
+                _context.Personaje.Update(personaje);
+                _context.SaveChanges();
+                TempData["mensaje"] = "Se actualizo un personaje";
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 }
 

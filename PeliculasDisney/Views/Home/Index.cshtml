@@ -3,7 +3,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-
+<h1>LISTA DE PERSONAJES</h1>
 <section id="gallery">
     <div class="container ">
         <div class="row">
@@ -19,13 +19,12 @@
                         {
                             <img id="imagenArtista" style="width:350px;height:350px; object-fit:cover" src="">
                         }
-                        <div class="card-body">
-                            <h5 class="card-title">@item.Nombre </h5>
-                           
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Nombre </h5>
 
-                            <a asp-action="Create" asp-controller="Contactos" class="btn btn-danger btn-sm">Detalle</a>
 
-                        </div>
+                        <a asp-controller="Personajes" asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-warning">Detalle</a>
+                    </div>
                     </div>
                 </div>
             }
