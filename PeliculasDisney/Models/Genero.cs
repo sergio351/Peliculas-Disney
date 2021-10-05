@@ -8,8 +8,10 @@ namespace PeliculasDisney.Models
 {
     public class Genero
     {
+        [Key]
+        public int Id { get; set; }
         public string Nombre { get; set; }
-        public byte Imagen { get; set; }
+        public byte[] Imagen { get; set; }
         [Display(Name = "Peliculas Asociadas")]
         public string PeliculasAsociadas { get; set; }
 

@@ -1,7 +1,9 @@
 ﻿@model IEnumerable<PeliculasDisney.Models.Personaje>
+
 @{
     ViewData["Title"] = "Home Page";
 }
+
 
 <h1>LISTA DE PERSONAJES</h1>
 <section id="gallery">
@@ -19,12 +21,12 @@
                         {
                             <img id="imagenArtista" style="width:350px;height:350px; object-fit:cover" src="">
                         }
-                    <div class="card-body">
-                        <h5 class="card-title">@item.Nombre </h5>
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Nombre </h5>
 
 
-                        <a asp-controller="Personajes" asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-warning">Detalle</a>
-                    </div>
+                            <a asp-controller="Personajes" asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-warning">Detalle</a>
+                        </div>
                     </div>
                 </div>
             }
@@ -32,3 +34,4 @@
         </div>
     </div>
 </section>
+

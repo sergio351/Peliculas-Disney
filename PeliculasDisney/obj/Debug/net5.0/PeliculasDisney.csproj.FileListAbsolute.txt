@@ -441,3 +441,8 @@ C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Raz
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\Edit.cshtml.g.cs
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\Delete.cshtml.g.cs
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\Detalle.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Create.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Delete.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Edit.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Index.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Detalle.cshtml.g.cs

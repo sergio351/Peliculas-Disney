@@ -14,5 +14,7 @@ namespace PeliculasDisney.Data
         {
         }
         public DbSet<Personaje> Personaje { get; set; }
+        public DbSet<Pelicula> Pelicula { get; set; }
+        public DbSet<Genero> Genero { get; set; }
     }
 }
