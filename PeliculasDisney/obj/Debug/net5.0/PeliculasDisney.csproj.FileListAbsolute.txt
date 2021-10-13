@@ -446,3 +446,5 @@ C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Raz
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Edit.cshtml.g.cs
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Index.cshtml.g.cs
 C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\Detalle.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Peliculas\ListaPeliculas.cshtml.g.cs
+C:\Users\leira\source\repos\PeliculasDisney\PeliculasDisney\obj\Debug\net5.0\Razor\Views\Personajes\ListaPersonajes.cshtml.g.cs

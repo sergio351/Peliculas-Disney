@@ -175,6 +175,11 @@ namespace PeliculasDisney.Controllers
             }
             return View();
         }
+        public IActionResult ListaPersonajes()
+        {
+            IEnumerable<Personaje> listPersonaje = _context.Personaje;
+            return View(listPersonaje);
+        }
     }
 }
 

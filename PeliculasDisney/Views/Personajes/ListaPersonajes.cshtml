@@ -1,0 +1,37 @@
+﻿@model IEnumerable<PeliculasDisney.Models.Personaje>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1>LISTA DE PERSONAJES</h1>
+<section id="gallery">
+    <div class="container ">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        @if (item.Imagen != null)
+                        {
+                            <img id="imagenArtista" src="data:image/*;base64,@(Convert.ToBase64String(item.Imagen))">
+                        }
+                        else
+                        {
+                            <img id="imagenArtista" style="width:350px;height:350px; object-fit:cover" src="">
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre: @item.Nombre </h5>
+
+
+                            <a asp-controller="Personajes" asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-warning">Detalle</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+

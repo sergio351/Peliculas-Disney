@@ -175,6 +175,11 @@ namespace PeliculasDisney.Controllers
             }
             return View();
         }
+        public IActionResult ListaPeliculas()
+        {
+            IEnumerable<Pelicula> listPelicula = _context.Pelicula;
+            return View(listPelicula);
+        }
     }
 }
 
