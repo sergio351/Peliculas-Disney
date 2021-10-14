@@ -6,32 +6,38 @@
 }
 
 
+<form asp-action="Buscar" class="form-inline my-1 my-lg-0">
+    <input name="filtrotitulo" class="form-control mr-sm-1" type="search" placeholder="Buscar por Titulo" aria-label="Search">
+    <button class="btn btn-outline-success my-1 my-sm-0 text-dark" type="submit">Buscar</button>
+</form>
+
+
 <h1>LISTA DE PELICULAS</h1>
-<section id="gallery">
-    <div class="container ">
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-lg-4 mb-4">
-                    <div class="card">
-                        @if (item.Imagen != null)
-                        {
-                            <img id="imagenArtista" src="data:image/*;base64,@(Convert.ToBase64String(item.Imagen))">
-                        }
-                        else
-                        {
-                            <img id="imagenArtista" style="width:350px;height:350px; object-fit:cover" src="">
-                        }
-                    <div class="card-body">
-                        <h5 class="card-title">Titulo: @item.Titulo </h5>
-                        <h5 class="card-title">Fecha de Creacion: @item.FechaCreacion </h5>
+     <section id="gallery">
+          <div class="container ">
+               <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 mb-4">
+                            <div class="card">
+                                @if (item.Imagen != null)
+                                {
+                                    <img id="imagenArtista" src="data:image/*;base64,@(Convert.ToBase64String(item.Imagen))">
+                                }
+                                else
+                                {
+                                    <img id="imagenArtista" style="width:350px;height:350px; object-fit:cover" src="">
+                                }
+                                <div class="card-body">
+                                    <h5 class="card-title">Titulo: @item.Titulo </h5>
+                                    <h5 class="card-title">Fecha de Creacion: @item.FechaCreacion </h5>
 
-                    </div>
-                    </div>
-                </div>
-            }
+                                </div>
+                            </div>
+                        </div>
+                    }
 
-        </div>
-    </div>
-</section>
+               </div>
+          </div>
+     </section>
 

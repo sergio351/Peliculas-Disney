@@ -4,6 +4,10 @@
     ViewData["Title"] = "Home Page";
 }
 
+<form asp-action="Buscar" class="form-inline my-1 my-lg-0">
+    <input name="filtronombre" class="form-control mr-sm-1" type="search" placeholder="Buscar por Nombre" aria-label="Search">
+    <button class="btn btn-outline-success my-1 my-sm-0 text-dark" type="submit">Buscar</button>
+</form>
 
 <h1>LISTA DE PERSONAJES</h1>
 <section id="gallery">

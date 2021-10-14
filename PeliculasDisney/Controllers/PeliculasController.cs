@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PeliculasDisney.Data;
 using PeliculasDisney.Models;
 using System;
@@ -180,6 +181,15 @@ namespace PeliculasDisney.Controllers
             IEnumerable<Pelicula> listPelicula = _context.Pelicula;
             return View(listPelicula);
         }
+
+        public async Task<IActionResult> Buscar(string filtrotitulo)
+        {
+            return View("Index", await _context.Pelicula.Where(a => a.Titulo.Contains(filtrotitulo)).ToListAsync());
+
+        }
+
     }
+
 }
+
 
